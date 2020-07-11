@@ -1,20 +1,24 @@
 package domain.models;
 
-public class Song implements Comparable<Song>{
+ public class Song {
 
 
-    private int score;
+     private int score;
+     private String albumName;
 
-    public void setScore(int score) {
-        this.score = score;
-    }
+     public void setScore(int score) {
+         this.score = score;
+     }
 
-    public int getScore() {
-        return score;
-    }
+     public int getScore() {
+         return score;
+     }
 
-    @Override
-    public int compareTo(Song another) {
-        return getScore() - another.getScore();
-    }
-}
+     public String getAlbumName() {
+         return albumName;
+     }
+
+     public void setAlbumName(String albumName) {
+         this.albumName = albumName;
+     }
+ }
