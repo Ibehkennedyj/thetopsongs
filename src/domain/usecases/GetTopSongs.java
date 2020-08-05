@@ -14,7 +14,7 @@ public class GetTopSongs {
 
     FindSongs songs;
 
-    List<Song> getTopSongs(Artist artist) {
+    public List<Song> getTopSongs(Artist artist) {
         return songs.find(artist)
                 .stream()
                 .sorted(comparingInt(Song::getScore).reversed())
